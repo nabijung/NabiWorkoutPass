@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		01105E3223FB79B200B12BBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01105E3123FB79B200B12BBD /* AppDelegate.swift */; };
 		01105E3423FB79B200B12BBD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01105E3323FB79B200B12BBD /* SceneDelegate.swift */; };
-		01105E3623FB79B200B12BBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01105E3523FB79B200B12BBD /* ViewController.swift */; };
 		01105E3923FB79B200B12BBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01105E3723FB79B200B12BBD /* Main.storyboard */; };
 		01105E3B23FB79B200B12BBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01105E3A23FB79B200B12BBD /* Assets.xcassets */; };
 		01105E3E23FB79B200B12BBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01105E3C23FB79B200B12BBD /* LaunchScreen.storyboard */; };
 		01105E4923FB79B200B12BBD /* WorkoutPassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01105E4823FB79B200B12BBD /* WorkoutPassTests.swift */; };
 		01105E5423FB79B200B12BBD /* WorkoutPassUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01105E5323FB79B200B12BBD /* WorkoutPassUITests.swift */; };
 		01105E6723FB7A8D00B12BBD /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01105E6623FB7A8D00B12BBD /* Workout.swift */; };
+		C637759623FEDD5600DA2455 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C637759523FEDD5600DA2455 /* ViewController.swift */; };
+		C637759D23FEE55100DA2455 /* WorkoutCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C637759B23FEE55100DA2455 /* WorkoutCollectionViewCell.swift */; };
+		C637759E23FEE55100DA2455 /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C637759C23FEE55100DA2455 /* WorkoutTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +41,6 @@
 		01105E2E23FB79B200B12BBD /* WorkoutPass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkoutPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01105E3123FB79B200B12BBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01105E3323FB79B200B12BBD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		01105E3523FB79B200B12BBD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
 		01105E3823FB79B200B12BBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01105E3A23FB79B200B12BBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01105E3D23FB79B200B12BBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +52,9 @@
 		01105E5323FB79B200B12BBD /* WorkoutPassUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutPassUITests.swift; sourceTree = "<group>"; };
 		01105E5523FB79B200B12BBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01105E6623FB7A8D00B12BBD /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		C637759523FEDD5600DA2455 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = WorkoutPass/ViewController.swift; sourceTree = SOURCE_ROOT; };
+		C637759B23FEE55100DA2455 /* WorkoutCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkoutCollectionViewCell.swift; path = WorkoutPass/WorkoutCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
+		C637759C23FEE55100DA2455 /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkoutTableViewCell.swift; path = WorkoutPass/WorkoutTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,8 @@
 		01105E6223FB79C000B12BBD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C637759B23FEE55100DA2455 /* WorkoutCollectionViewCell.swift */,
+				C637759C23FEE55100DA2455 /* WorkoutTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -150,7 +156,7 @@
 		01105E6323FB79C400B12BBD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				01105E3523FB79B200B12BBD /* ViewController.swift */,
+				C637759523FEDD5600DA2455 /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -285,10 +291,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01105E3623FB79B200B12BBD /* ViewController.swift in Sources */,
 				01105E3223FB79B200B12BBD /* AppDelegate.swift in Sources */,
+				C637759E23FEE55100DA2455 /* WorkoutTableViewCell.swift in Sources */,
 				01105E3423FB79B200B12BBD /* SceneDelegate.swift in Sources */,
+				C637759623FEDD5600DA2455 /* ViewController.swift in Sources */,
 				01105E6723FB7A8D00B12BBD /* Workout.swift in Sources */,
+				C637759D23FEE55100DA2455 /* WorkoutCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

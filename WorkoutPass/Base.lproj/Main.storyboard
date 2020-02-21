@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,12 +15,145 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ziv-tV-RR7">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="workoutTableCell" rowHeight="84" id="X3S-4N-Hrq" customClass="WorkoutTableViewCell" customModule="WorkoutPass" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="84"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X3S-4N-Hrq" id="oce-3n-q7c">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="84"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7iP-3n-m5w">
+                                                    <rect key="frame" x="20" y="52" width="75" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1x4-sR-F26">
+                                                    <rect key="frame" x="20" y="11" width="42" height="27"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqx-GZ-O8K">
+                                                    <rect key="frame" x="352" y="11" width="39" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seats Remaining" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECT-br-zbN">
+                                                    <rect key="frame" x="263" y="52" width="128" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1x4-sR-F26" firstAttribute="leading" secondItem="7iP-3n-m5w" secondAttribute="leading" id="0gg-wW-fdr"/>
+                                                <constraint firstItem="rqx-GZ-O8K" firstAttribute="trailing" secondItem="ECT-br-zbN" secondAttribute="trailing" id="5B2-ZP-gAK"/>
+                                                <constraint firstItem="7iP-3n-m5w" firstAttribute="top" secondItem="1x4-sR-F26" secondAttribute="bottom" constant="14" id="BDy-hC-2vX"/>
+                                                <constraint firstItem="7iP-3n-m5w" firstAttribute="bottom" secondItem="oce-3n-q7c" secondAttribute="bottomMargin" id="Dc0-Ok-itU"/>
+                                                <constraint firstItem="7iP-3n-m5w" firstAttribute="baseline" secondItem="ECT-br-zbN" secondAttribute="baseline" id="FGV-Mh-UO2"/>
+                                                <constraint firstItem="1x4-sR-F26" firstAttribute="top" secondItem="rqx-GZ-O8K" secondAttribute="top" id="GQK-Rq-7PF"/>
+                                                <constraint firstItem="ECT-br-zbN" firstAttribute="top" secondItem="rqx-GZ-O8K" secondAttribute="bottom" constant="20" id="Rbv-uK-qXz"/>
+                                                <constraint firstItem="1x4-sR-F26" firstAttribute="top" secondItem="oce-3n-q7c" secondAttribute="topMargin" id="a2f-Br-sPH"/>
+                                                <constraint firstItem="1x4-sR-F26" firstAttribute="leading" secondItem="oce-3n-q7c" secondAttribute="leadingMargin" id="yCe-v7-iyx"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="rqx-GZ-O8K" secondAttribute="trailing" constant="3" id="zdf-yq-KsT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="instructorLabel" destination="7iP-3n-m5w" id="XjO-hH-kx3"/>
+                                            <outlet property="priceLabel" destination="rqx-GZ-O8K" id="yFh-c8-LSx"/>
+                                            <outlet property="seatsLabel" destination="ECT-br-zbN" id="uXQ-Dr-BAf"/>
+                                            <outlet property="titleLabel" destination="1x4-sR-F26" id="0CN-Rg-Xq5"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Vca-jy-ctB">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="EY1-7R-9HY">
+                                    <size key="itemSize" width="200" height="200"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="workoutCollectionCell" id="PNq-hZ-I4g" customClass="WorkoutCollectionViewCell" customModule="WorkoutPass" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ruf-MZ-O3B">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ry0-7k-AQM">
+                                                    <rect key="frame" x="10" y="20" width="180" height="55"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dU-o1-tHc">
+                                                    <rect key="frame" x="20" y="133" width="160" height="16.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Seats" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsT-cb-CZc">
+                                                    <rect key="frame" x="20" y="168" width="160" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Instructor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAh-L2-DFM">
+                                                    <rect key="frame" x="20" y="83" width="160" height="23.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="200" height="200"/>
+                                        <connections>
+                                            <outlet property="instructorCollectionLabel" destination="eAh-L2-DFM" id="uvO-D1-xbw"/>
+                                            <outlet property="priceCollectionLabel" destination="2dU-o1-tHc" id="MTh-Qp-Zth"/>
+                                            <outlet property="seatsCollectionLabel" destination="gsT-cb-CZc" id="nre-R8-zXg"/>
+                                            <outlet property="titleCollectionLabel" destination="Ry0-7k-AQM" id="wjk-mx-JBt"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Vca-jy-ctB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Iu8-r4-uOt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vca-jy-ctB" secondAttribute="trailing" id="OpK-YY-Enn"/>
+                            <constraint firstItem="Vca-jy-ctB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UjA-4q-hvN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Vca-jy-ctB" secondAttribute="bottom" id="zqO-N2-ofu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="tyc-7x-ht1">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="Hmx-CU-SxD"/>
+                        <barButtonItem key="rightBarButtonItem" image="square.grid.2x2" catalog="system" id="Hmx-CU-SxD">
+                            <connections>
+                                <action selector="toggleViewPressed:" destination="BYZ-38-t0r" id="8ZK-5P-H8n"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="toggleButton" destination="Hmx-CU-SxD" id="Zlv-n2-7So"/>
+                        <outlet property="workoutCollectionView" destination="Vca-jy-ctB" id="7oY-C5-OQi"/>
+                        <outlet property="workoutTableView" destination="ziv-tV-RR7" id="soL-tK-gSH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -44,4 +178,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="square.grid.2x2" catalog="system" width="64" height="56"/>
+    </resources>
 </document>

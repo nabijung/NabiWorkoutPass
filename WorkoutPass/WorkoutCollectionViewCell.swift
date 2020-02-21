@@ -9,4 +9,11 @@ import UIKit
 
 class WorkoutCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var titleCollectionLabel: UILabel!
+    
+    @IBOutlet weak var instructorCollectionLabel: UILabel!
+    
+    @IBOutlet weak var priceCollectionLabel: UILabel!
+    
+    @IBOutlet weak var seatsCollectionLabel: UILabel!
 }
